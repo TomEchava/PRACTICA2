@@ -1,2 +1,3 @@
 # PRACTICA2
-Lectura de archivo CSV y filtracion de datos con programacion funcional en JAVA
+Creado por Tomas Echavarria
+Lectura de archivo CSV y filtracion de registros utilizando programacion funcional en JAVA
