@@ -20,37 +20,37 @@ public class Main {
         ListaVentas.stream().filter(ventas -> ventas.getCITY().equals("NYC")).forEach(System.out::println);
         System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de NUEVA YORK fue:");
-        ListaVentas.stream().filter(ventas -> ventas.getCITY().equals("NYC"))
+        System.out.println(ListaVentas.stream().filter(ventas -> ventas.getCITY().equals("NYC"))
                 .mapToDouble(ventas -> Double.parseDouble(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
-                .sum();
+                .sum()+" USD");
         System.out.println("\n"+"\n"+"\n");
         System.out.println("La cantidad de autos clasicos vendidos en NUEVA YORK fue:");
-        ListaVentas.stream().
+        System.out.println(ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Classic Cars"))
                 .mapToInt(ventas -> Integer.parseInt(ventas.getQUANTITYORDERED()))
-                .sum();
+                .sum()+" Unidades");
         System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de autos clasicos vendidos en NUEVA YORK fue:");
-        ListaVentas.stream().
+        System.out.println(ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Classic Cars"))
                 .mapToDouble(ventas -> Double.parseDouble(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
-                .sum();
+                .sum()+" USD");
         System.out.println("\n"+"\n"+"\n");
         System.out.println("La cantidad de motocicletas vendidas en NUEVA YORK fue:");
-        ListaVentas.stream().
+        System.out.println(ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Motorcycles"))
                 .mapToInt(ventas -> Integer.parseInt(ventas.getQUANTITYORDERED()))
-                .sum();
+                .sum()+" Unidades");
         System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de motocicletas vendidas en NUEVA YORK fue:");
-        ListaVentas.stream().
+        System.out.println(ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Motorcycles"))
                 .mapToDouble(ventas -> Double.parseDouble(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
-                .sum();
+                .sum()+" USD");
         System.out.println("\n"+"\n"+"\n");
         System.out.println("El cliente de NUEVA YORK que mas autos clasicos compro fue:");
         ListaVentas.stream().
