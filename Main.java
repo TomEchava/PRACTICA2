@@ -17,71 +17,55 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println("Lista de ventas en NUEVA YORK:");
         ListaVentas.stream().filter(ventas -> ventas.getCITY().equals("NYC")).forEach(System.out::println);
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de NUEVA YORK fue:");
         ListaVentas.stream().filter(ventas -> ventas.getCITY().equals("NYC"))
                 .mapToInt(ventas -> Integer.parseInt(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
                 .sum();
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("La cantidad de autos clasicos vendidos en NUEVA YORK fue:");
         ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Classic Cars"))
                 .mapToInt(ventas -> Integer.parseInt(ventas.getQUANTITYORDERED()))
                 .sum();
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de autos clasicos vendidos en NUEVA YORK fue:");
         ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Classic Cars"))
-                .mapToInt(ventas -> Integer.parseInt(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
+                .mapToDouble(ventas -> Double.parseDouble(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
                 .sum();
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("La cantidad de motocicletas vendidas en NUEVA YORK fue:");
         ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Motorcycles"))
                 .mapToInt(ventas -> Integer.parseInt(ventas.getQUANTITYORDERED()))
                 .sum();
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El total de ventas de motocicletas vendidas en NUEVA YORK fue:");
         ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Motorcycles"))
-                .mapToInt(ventas -> Integer.parseInt(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
+                .mapToDouble(ventas -> Double.parseDouble(ventas.getPRICEEACH())*Integer.parseInt(ventas.getQUANTITYORDERED()))
                 .sum();
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El cliente de NUEVA YORK que mas autos compro fue:");
         ListaVentas.stream().
                 filter(ventas -> ventas.getCITY().equals("NYC")).
                 filter(ventas -> ventas.getPRODUCTLINE().equals("Classic Cars"))
                 .max((ventas1, ventas2) -> Integer.parseInt(ventas1.getQUANTITYORDERED()) - Integer.parseInt(ventas2.getQUANTITYORDERED()))
                 .ifPresent(System.out::println);
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El cliente que mas compro fue:");
-        ListaVentas.stream().
-                max((ventas1, ventas2) -> Integer.parseInt(ventas1.getQUANTITYORDERED()) - Integer.parseInt(ventas2.getQUANTITYORDERED()))
+        ListaVentas.stream()
+                .max((ventas1, ventas2) -> Integer.parseInt(ventas1.getQUANTITYORDERED()) - Integer.parseInt(ventas2.getQUANTITYORDERED()))
                 .ifPresent(System.out::println);
-        System.out.println("\n");
-        System.out.println("\n");
-        System.out.println("\n");
+        System.out.println("\n"+"\n"+"\n");
         System.out.println("El cliente que menos compro fue:");
-        ListaVentas.stream().
-                min((ventas1, ventas2) -> Integer.parseInt(ventas1.getQUANTITYORDERED()) - Integer.parseInt(ventas2.getQUANTITYORDERED()))
+        ListaVentas.stream()
+                .min((ventas1, ventas2) -> Integer.parseInt(ventas1.getQUANTITYORDERED()) - Integer.parseInt(ventas2.getQUANTITYORDERED()))
                 .ifPresent(System.out::println);
 
 
