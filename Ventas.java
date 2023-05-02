@@ -255,4 +255,33 @@ public class Ventas {
         this.DEALSIZE = DEALSIZE;
     }
 
+    @Override
+    public String toString(){
+        return "ORDERNUMBER: " + this.ORDERNUMBER + "/" +
+        "QUANTITYORDERED: " + this.QUANTITYORDERED + "/" +
+        "PRICEEACH: " + this.PRICEEACH + "/" +
+        "ORDERLINENUMBER: " + this.ORDERLINENUMBER + "/" +
+        "SALES: " + this.SALES + "/" +
+        "ORDERDATE: " + this.ORDERDATE + "/" +
+        "STATUS: " + this.STATUS + "/" +
+        "QTR_ID: " + this.QTR_ID + "/" +
+        "MONTH_ID: " + this.MONTH_ID + "/" +
+        "YEAR_ID: " + this.YEAR_ID + "/" +
+        "PRODUCTLINE: " + this.PRODUCTLINE + "/" +
+        "MSRP: " + this.MSRP + "/" +
+        "PRODUCTCODE: " + this.PRODUCTCODE + "/" +
+        "CUSTOMERNAME: " + this.CUSTOMERNAME + "/" +
+        "PHONE: " + this.PHONE + "/" +
+        "ADDRESSLINE1: " + this.ADDRESSLINE1 + "/" +
+        "ADDRESSLINE2: " + this.ADDRESSLINE2 + "/" +
+        "CITY: " + this.CITY + "/" +
+        "STATE: " + this.STATE + "/" +
+        "POSTALCODE: " + this.POSTALCODE + "/" +
+        "COUNTRY: " + this.COUNTRY + "/" +
+        "TERRITORY: " + this.TERRITORY + "/" +
+        "CONTACTLASTNAME: " + this.CONTACTLASTNAME + "/" +
+        "CONTACTFIRSTNAME: " + this.CONTACTFIRSTNAME + "/" +
+        "DEALSIZE: " + this.DEALSIZE;
+    }
+
 }
